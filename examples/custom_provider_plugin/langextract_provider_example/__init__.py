@@ -12,14 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Compatibility shim for langextract.data imports.
+"""Example custom provider plugin for LangExtract."""
 
-This module provides backward compatibility for code that imports from
-langextract.data. All functionality has moved to langextract.core.data.
-"""
+from langextract_provider_example.provider import CustomGeminiProvider
 
-from __future__ import annotations
-
-# Re-export everything from core.data for backward compatibility
-# pylint: disable=unused-wildcard-import
-from langextract.core.data import *
+__all__ = ["CustomGeminiProvider"]
+__version__ = "0.1.0"

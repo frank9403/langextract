@@ -12,14 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Compatibility shim for langextract.data imports.
-
-This module provides backward compatibility for code that imports from
-langextract.data. All functionality has moved to langextract.core.data.
-"""
-
+"""Provider-specific schema implementations."""
 from __future__ import annotations
 
-# Re-export everything from core.data for backward compatibility
-# pylint: disable=unused-wildcard-import
-from langextract.core.data import *
+from langextract.providers.schemas import gemini
+
+GeminiSchema = gemini.GeminiSchema  # Backward compat
+
+__all__ = ["GeminiSchema"]
